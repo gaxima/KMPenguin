@@ -48,14 +48,13 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
             implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.serialization)
             implementation(libs.kotlinx.coroutines.core)
             implementation(libs.koin.core)
             implementation(libs.koin.compose)
             implementation(libs.koin.compose.viewmodel)
             implementation(libs.koin.compose.viewmodel.navigation)
-            implementation(libs.koin.compose.viewmodel.navigation)
             implementation(libs.koin.ktor)
-
         }
     }
 }
