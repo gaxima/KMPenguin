@@ -1,15 +1,15 @@
 package org.xima.penguinprojectkmp.data.remote
 
 import io.ktor.client.HttpClient
-import io.ktor.client.engine.HttpClientEngine
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.client.plugins.defaultRequest
 import io.ktor.client.plugins.logging.LogLevel
 import io.ktor.client.plugins.logging.Logging
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 
-fun createHttpClient(engine: HttpClientEngine): HttpClient {
-    return HttpClient(engine) {
+object KtorApiClient {
+    val httpClient = HttpClient {
         install(Logging) {
             level = LogLevel.ALL
         }
@@ -20,5 +20,12 @@ fun createHttpClient(engine: HttpClientEngine): HttpClient {
                 }
             )
         }
+        defaultRequest {
+            url(
+                BASE_URL
+            )
+        }
     }
+
+    private const val BASE_URL = "https://penguinproject.onrender.com"
 }

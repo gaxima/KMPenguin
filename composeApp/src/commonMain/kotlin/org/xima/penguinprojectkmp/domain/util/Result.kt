@@ -1,4 +1,6 @@
-package org.xima.penguinprojectkmp.data.remote.util
+package org.xima.penguinprojectkmp.domain.util
+
+import org.xima.penguinprojectkmp.data.remote.util.Error
 
 sealed interface Result<out D, out E : Error> {
     data class Success<out D>(val data: D) : Result<D, Nothing>
