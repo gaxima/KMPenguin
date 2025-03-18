@@ -3,10 +3,8 @@ package org.xima.penguinprojectkmp.presentation.penguinList
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import org.xima.penguinprojectkmp.domain.model.Penguin
 import org.xima.penguinprojectkmp.domain.repository.PenguinRepository
 import org.xima.penguinprojectkmp.presentation.util.DataState
 
